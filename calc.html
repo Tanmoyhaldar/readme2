@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <title>CALCULATOR</title>
+        <script>
+                  function insert(num)
+                    {
+                       document.form.bb.value = document.form.bb.value+num;
+                    }
+                  function equal()
+                    {
+                        var exp = document.form.bb.value;
+                          if(exp)
+                           document.form.bb.value = eval(exp);
+                    }
+                  function clearText()
+                    {
+                        document.form.bb.value = "";
+                    }
+                 
+        </script>
+        <style>
+             .aa
+               {
+                 height:80px;
+                 width:80px;
+                 border-radius: 50%;
+                 border-width: 2px;
+                 border: 2px solid red;
+                 background-color:red;
+                 color:black;
+                 font-weight: bold;
+                 cursor: pointer;
+                 font-size: 20px;
+               }
+             .bb
+               {
+                   width:320px;
+                   height:40px;
+                   border: 2px solid grey;
+                   background-color:black;
+                   color: cyan;
+               }
+              .cc
+                {
+                  height:80px;
+                 width:80px;
+                 border-radius: 50%;
+                 border-width: 2px;
+                 border: 2px solid blue;
+                 background-color:blue;
+                 color:cyan;
+                 font-weight: bold;
+                 cursor: pointer;
+                 font-size: 30px;
+                }
+              .dd
+              {
+                height:80px;
+                 width:80px;
+                 border-radius: 50%;
+                 border-width: 2px;
+                 border: 2px solid white;
+                 background-color:rgb(100,500,200);
+                 color:red;
+                 font-weight: bold;
+                 cursor: pointer;
+                 font-size: 35px;
+              }
+              .aa:hover, .cc:hover,.dd:hover
+                 {
+                  background:maroon;
+                	color:lightgreen;
+                  height:85px;
+                  width:85px;
+                  font-size: 45px;
+                 }
+              .bb:hover
+                {
+                  background-color: brown;
+                }
+             body
+               {
+                   background-color: black;
+                   background-repeat: none;
+                   position:absolute;
+               }
+
+             .main
+               {
+                   background-color:black;
+                   position:relative;
+                   left:40px;
+                   top: 50px;
+               }
+        </style>
+    </head>
+    <body>
+         <div class="main">
+             <form name="form">
+                 <input class="bb" name="bb" placeholder="ENTER">
+             </form>
+             <table>
+                 <tr>
+                     <td><input class="dd" onclick="clearText()" type="button" value="C"</td>
+                     <td><input class="cc" onclick="insert('/')" type="button" value="/"</td>
+                     <td><input class="cc" onclick="insert('*')" type="button" value="x"</td>
+                     <td><input class="cc" onclick="equal()" type="button" value="="</td>
+                 </tr>
+                 <tr>
+                    <td><input class="aa" onclick="insert(7)" type="button" value="7"</td>
+                    <td><input class="aa" onclick="insert(8)" type="button" value="8"</td>
+                    <td><input class="aa" onclick="insert(9)" type="button" value="9"</td>
+                    <td><input class="cc" onclick="insert('-')" type="button" value="-"</td>
+                </tr>
+                <tr>
+                    <td><input class="aa" onclick="insert(4)" type="button" value="4"</td>
+                    <td><input class="aa" onclick="insert(5)" type="button" value="5"</td>
+                    <td><input class="aa" onclick="insert(6)" type="button" value="6"</td>
+                    <td><input class="cc" onclick="insert('+')" type="button" value="+"</td>
+                </tr>
+                <tr>
+                    <td><input class="aa" onclick="insert(1)" type="button" value="1"</td>
+                    <td><input class="aa" onclick="insert(2)" type="button" value="2"</td>
+                    <td><input class="aa" onclick="insert(3)" type="button" value="3"</td>
+                    <td><input class="aa" onclick="insert('.')" type="button" value="."</td>
+                   
+                </tr>
+             </table>
+         </div>
+    </body>
+</html>
